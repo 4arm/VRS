@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User Information</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><a href="dashboard.html"><i class="fas fa-shield-alt"></i> Safety Campus</a></div>
+        <div class="nav-links">
+            <a href="dashboard.html">Home</a>
+            <a href="#">Apply</a>
+            <div id="admin-conten" style="display: none;">
+                <a href="#">Compound</a>
+            </div>
+            <a href="profile.html">Profile</a>
+        </div>
+        <div class="user-info">
+            <div class="user-icon"></div>
+            <div>
+                <div id="username-display"></div>
+                <div id="role-display" style="font-size: 0.8em; color: #9ca3af;"></div>
+            </div>
+            <div class="dropdown">
+                <a id="logout-link" href="index.html">Logout</a>
+            </div>
+        </div>            
+    </div>
+
+    <div class="update-container">
+        <form id="updateForm">
+            <input type="text" id="user_id" placeholder="Enter user ID" required><br>
+            <input type="text" id="username" placeholder="Enter new username" required><br>
+            <input type="email" id="email" placeholder="Enter new email" required><br>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0/dist/supabase.min.js"></script>
+    <script type="module" src="script/update.js"></script>
+</body>
+</html>

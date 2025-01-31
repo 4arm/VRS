@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo"><a href="dashboard.html"><i class="fas fa-shield-alt"></i> Safety Campus</a></div>
+        <div class="nav-links">
+            <a href="dashboard.html">Home</a>
+            <a href="#">Apply</a>
+            <div id="admin-conten" style="display: none;">
+                <a href="#">Compound</a>
+            </div>
+            <a href="profile.html">Profile</a>
+        </div>
+        <div class="user-info">
+            <div class="user-icon">D</div>
+            <div>
+                <div id="username-display"></div>
+                <div id="role-display" style="font-size: 0.8em; color: #9ca3af;"></div>
+            </div>
+            <div class="dropdown">
+                <a id="logout-link" href="index.html">Logout</a>
+            </div>
+        </div>            
+    </div>
+
+    <div id="user-content" style="display: none;">
+        <div class="dashboard-container">
+            <h2>Welcome to User Dashboard</h2>
+            <div id="user-info" class="user-info">
+                <!-- User information will be dynamically loaded here -->
+            </div>
+            <a href="index.html">
+                <button id="logout-button" class="logout-button">Logout</button>
+            </a>
+            
+        </div>
+    </div>
+
+    <div id="admin-content" style="display: none;">
+        <div class="dashboard-container">
+            <h2>Welcome to Admin Dashboard</h2>
+            <div id="user-info" class="user-info">
+                <!-- User information will be dynamically loaded here -->
+            </div>
+            <a href="index.html">
+                <button id="logout-button" class="logout-button">Logout</button>
+            </a>
+        </div>
+    </div>
+    <script src="script/dropdown.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0"></script>
+    <script type="module" src="script/dashboard.js"></script>
+</body>
+</html>
